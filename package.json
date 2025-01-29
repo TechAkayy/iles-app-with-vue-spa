@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "iles dev --open",
-    "build": "iles build",
+    "build": "npm run app:build && npm run site:build",
+    "site:build": "iles build",
+    "app:build": "vite build app",
     "preview": "iles preview --open --port 5050",
     "now": "npm run build && npm run preview",
     "typecheck": "vue-tsc --noEmit"
